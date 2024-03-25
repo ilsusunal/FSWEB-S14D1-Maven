@@ -2,8 +2,10 @@ import com.workintech.cylinder.Circle;
 import com.workintech.cylinder.Cylinder;
 import com.workintech.developers.HRManager;
 import com.workintech.developers.JuniorDeveloper;
+import com.workintech.developers.MidDeveloper;
 import com.workintech.pool.Cuboid;
 import com.workintech.pool.Rectangle;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,16 +40,19 @@ public class Main {
         System.out.println("*************************");
 
         System.out.println("DEVELOPER COMPANY PROBLEM :");
-        HRManager hrManager = new HRManager(1, "John Doe", 70000);
-        JuniorDeveloper junior1 = new JuniorDeveloper(1, "Jane 1 Doe", 30000);
-        JuniorDeveloper junior2 = new JuniorDeveloper(1, "Jane 2 Doe", 30000);
-        JuniorDeveloper junior3 = new JuniorDeveloper(1, "Jane 3 Doe", 30000);
-        JuniorDeveloper junior4 = new JuniorDeveloper(1, "Jane 4 Doe", 30000);
+        HRManager hrManager = new HRManager(1, "John Doe", 7);
+        JuniorDeveloper junior1 = new JuniorDeveloper(1, "Jane 1 Doe", 3);
+        JuniorDeveloper junior2 = new JuniorDeveloper(2, "Jane 2 Doe", 3);
+        JuniorDeveloper junior3 = new JuniorDeveloper(3, "Jane 3 Doe", 3);
+        JuniorDeveloper junior4 = new JuniorDeveloper(4, "Jane 4 Doe", 3);
+        MidDeveloper mid1 = new MidDeveloper(11, "Jane Mid Doe", 5);
         hrManager.addEmployee(junior1);
         hrManager.addEmployee(junior2);
         hrManager.addEmployee(junior3);
         hrManager.addEmployee(junior4);
+        hrManager.addEmployee(mid1);
 
-        System.out.println("JUNIORS : " + hrManager.getJuniorDevelopers().toString());
+        System.out.println("JUNIORS : " + Arrays.toString(hrManager.getJuniorDevelopers()));
+        System.out.println("MIDS :" + Arrays.toString(hrManager.getMidDevelopers()));
     }
 }

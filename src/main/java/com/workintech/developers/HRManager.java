@@ -19,11 +19,12 @@ public class HRManager extends Employee{
             if(juniorDevelopers[i] == null){
                 juniorDevelopers[i] = developer;
                 employeeAdded = true;
+                System.out.println("Junior developer successfully added.");
                 break;
             }
         }
         if(!employeeAdded){
-            System.out.println("Employee capacity is full!");
+            System.out.println("Junior level employee capacity is full!");
         }
     }
     public void addEmployee(MidDeveloper developer){
@@ -32,11 +33,12 @@ public class HRManager extends Employee{
             if(midDevelopers[i] == null){
                 midDevelopers[i] = developer;
                 employeeAdded = true;
+                System.out.println("Mid developer successfully added.");
                 break;
             }
         }
         if(!employeeAdded){
-            System.out.println("Employee capacity is full!");
+            System.out.println("Mid level employee capacity is full!");
         }
     }
     public void addEmployee(SeniorDeveloper developer){
@@ -45,11 +47,12 @@ public class HRManager extends Employee{
             if(seniorDevelopers[i] == null){
                 seniorDevelopers[i] = developer;
                 employeeAdded = true;
+                System.out.println("Senior developer successfully added.");
                 break;
             }
         }
         if(!employeeAdded){
-            System.out.println("Employee capacity is full!");
+            System.out.println("Senior level employee capacity is full!");
         }
     }
 
