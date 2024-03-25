@@ -9,8 +9,4 @@ public class JuniorDeveloper extends Employee{
         System.out.println("JuniorDeveloper starts to working");
     }
 
-    @Override
-    public String toString() {
-        return "JuniorDeveloper{}" + super.toString();
-    }
 }
